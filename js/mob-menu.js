@@ -4,15 +4,17 @@
     closeMenuBtn: document.querySelector('.mob-menu-close-btn'),
     menu: document.querySelector('.mob-menu-box'),
   };
-
+console.log("кнопка бургер:", refs.openMenuBtn);
   function toggleMenu() {
+    console.log("Клік на кнопку бургер")
     if (window.innerWidth <= 480) {
       refs.menu.classList.toggle('is-hidden');
     }
   }
-
+ 
   refs.openMenuBtn.addEventListener('click', toggleMenu);
   refs.closeMenuBtn.addEventListener('click', toggleMenu);
+  
 
   window.addEventListener('resize', () => {
     if (window.innerWidth > 480) {
