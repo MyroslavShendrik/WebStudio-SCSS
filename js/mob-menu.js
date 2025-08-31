@@ -6,19 +6,17 @@
   };
 console.log("кнопка бургер:", refs.openMenuBtn);
   function toggleMenu() {
-    console.log("Клік на кнопку бургер")
-    if (window.innerWidth <= 480) {
-      refs.menu.classList.toggle('is-hidden');
-    }
+    console.log("Клік на кнопку бургер");
+    refs.menu.classList.toggle('is-hidden');
   }
  
   refs.openMenuBtn.addEventListener('click', toggleMenu);
   refs.closeMenuBtn.addEventListener('click', toggleMenu);
   
 
-  window.addEventListener('resize', () => {
-    if (window.innerWidth > 480) {
-      refs.menu.classList.add('is-hidden');
-    }
-  });
+  // window.addEventListener('resize', () => {
+  //   if (window.innerWidth > 480) {
+  //     refs.menu.classList.add('is-hidden');
+  //   }
+  // });
 })();
